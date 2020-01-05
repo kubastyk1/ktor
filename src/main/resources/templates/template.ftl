@@ -12,7 +12,7 @@
     <body>
     <div class="container">
         <div class="row m-1">
-            <h3>Users</h3>
+            <h3>Login system</h3>
         </div>
         <div class="row m-1">
             <#nested/>

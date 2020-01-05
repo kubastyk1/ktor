@@ -33,14 +33,23 @@ fun main(args: Array<String>) {
         routing {
             route("/"){
                 get{
-                    call.respond(FreeMarkerContent("index.ftl", mapOf("users" to dao.getAllUsers())))
+                    call.respond(FreeMarkerContent("login.ftl", mapOf("users" to dao.getAllUsers())))
+                }
+                post{
+                    val postParameters: Parameters = call.receiveParameters()
+                    val user = dao.validateUser(postParameters["login"] ?: "", postParameters["password"] ?: "")
+                    if (user == null)
+                        call.respond(FreeMarkerContent("login.ftl", mapOf("users" to dao.getAllUsers())))
+                     else
+                        call.respond(FreeMarkerContent("index.ftl", mapOf("users" to dao.getAllUsers())))
+
                 }
             }
             route("/user"){
                 get {
                     val action = (call.request.queryParameters["action"] ?: "new")
                     when(action){
-                        "new" -> call.respond(FreeMarkerContent("user.ftl",
+                        "new" -> call.respond(FreeMarkerContent("signup.ftl",
                                 mapOf("action" to action)))
                         "edit" -> {
                             val id = call.request.queryParameters["id"]

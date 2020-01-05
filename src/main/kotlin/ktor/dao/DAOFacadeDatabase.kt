@@ -12,6 +12,7 @@ interface DAOFacade: Closeable{
     fun deleteUser(id:Int)
     fun getUser(id:Int): User?
     fun getAllUsers(): List<User>
+    fun validateUser(login: String, password: String): User?
 }
 
 class DAOFacadeDatabase(val db: Database): DAOFacade{
@@ -59,6 +60,12 @@ class DAOFacadeDatabase(val db: Database): DAOFacade{
             User(it[Users.id], it[Users.login], it[Users.email], it[Users.password]
             )
         }
+    }
+    override fun validateUser(login: String, password: String) = transaction(db) {
+        Users.select { Users.login eq login and (Users.password eq password) }.map {
+            User(it[Users.id], it[Users.login], it[Users.email], it[Users.password]
+            )
+        }.singleOrNull()
     }
     override fun close() { }
 }
