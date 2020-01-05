@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85cc1548-ec60-4d32-b829-2b04c3549352" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/dao/DAOFacadeDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/dao/DAOFacadeDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/template.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/template.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,6 +82,14 @@
       <option name="presentableId" value="Default" />
       <updated>1578131013630</updated>
     </task>
+    <task id="LOCAL-00001" summary="login + signup">
+      <created>1578209525086</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578209525086</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,5 +102,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="login + signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="login + signup" />
   </component>
 </project>
