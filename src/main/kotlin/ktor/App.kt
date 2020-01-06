@@ -41,7 +41,7 @@ fun main(args: Array<String>) {
                     if (user == null)
                         call.respond(FreeMarkerContent("login.ftl", mapOf("users" to dao.getAllUsers())))
                      else
-                        call.respond(FreeMarkerContent("index.ftl", mapOf("users" to dao.getAllUsers())))
+                        call.respond(FreeMarkerContent("categoryList.ftl", mapOf("categories" to dao.getAllCategories())))
 
                 }
             }
@@ -81,6 +81,14 @@ fun main(args: Array<String>) {
                     if(id != null){
                         dao.deleteUser(id.toInt())
                         call.respond(FreeMarkerContent("index.ftl", mapOf("users" to dao.getAllUsers())))
+                    }
+                }
+            }
+            route("/category"){
+                get{
+                    val id = call.request.queryParameters["id"]
+                    if(id != null){
+                        call.respond(FreeMarkerContent("articleList.ftl", mapOf("articles" to dao.getArticlesFromCategory(id.toInt()))))
                     }
                 }
             }

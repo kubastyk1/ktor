@@ -2,7 +2,7 @@
 <@layout.mainLayout>
     <div class="row">
         <div class="col-xs-2 col-xs-offset-4">
-            <form action="/login" method="post">
+            <form action="/" method="post">
                 <div class="form-group">
                     <label for="name">Login</label>
                     <input type="text" class="form-control" id="login" name="login" placeholder="Enter Login" value="${(user.login)!}">
