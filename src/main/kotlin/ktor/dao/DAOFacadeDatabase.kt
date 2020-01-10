@@ -18,6 +18,7 @@ interface DAOFacade: Closeable{
     fun getAllCategories(): List<Category>
     fun getArticlesFromCategory(id:Int): List<Article>
     fun getUserByLogin(login:String?): User?
+    fun createArticle(title:String, category: String, user: String)
 }
 
 class DAOFacadeDatabase(val db: Database): DAOFacade{
@@ -101,6 +102,14 @@ class DAOFacadeDatabase(val db: Database): DAOFacade{
     }
     override fun getUserByLogin(login: String?): User? = transaction(db) {
         User.find{Users.login eq login.toString()}.singleOrNull()
+    }
+    override fun createArticle(title: String, category: String, user: String) = transaction(db) {
+        Articles.insert {
+            it[Articles.title] = title;
+            it[Articles.category] = getCategory(category.toInt()).id;
+            it[Articles.user] = getUser(user.toInt()).id
+        }
+        Unit
     }
     override fun close() { }
 }

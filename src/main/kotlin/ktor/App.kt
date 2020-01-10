@@ -112,6 +112,30 @@ fun main(args: Array<String>) {
                     call.respond(FreeMarkerContent("login.ftl", mapOf("users" to dao.getAllUsers())))
                 }
             }
+            route("/article"){
+                get {
+                    val action = (call.request.queryParameters["action"] ?: "new")
+                    when (action) {
+                        "new" -> call.respond(FreeMarkerContent("createArticle.ftl",
+                                mapOf("action" to action)))
+                    }
+                }
+                post {
+                    val postParameters: Parameters = call.receiveParameters()
+                    val action = postParameters["action"] ?: "new"
+                    when (action) {
+                        "new" -> {
+                            if(dao.getUserByLogin(postParameters["login"]) == null) {
+                                val session = call.sessions.get<MySession>()
+                                val id = dao.getUserByLogin(session?.name)?.id
+                                dao.createArticle(postParameters["title"] ?: "", postParameters["category"] ?: "",
+                                        id?.value.toString())
+                            }
+                            call.respond(FreeMarkerContent("categoryList.ftl", mapOf("categories" to dao.getAllCategories())))
+                        }
+                    }
+                }
+            }
         }
     }.start(wait = true)
 }

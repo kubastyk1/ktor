@@ -17,4 +17,9 @@
             </#list>
         </tbody>
     </table>
+    <div class="container">
+        <div class="row">
+            <a href="/article?action=new" class="btn btn-secondary float-right" role="button">New Article</a>
+        </div>
+    </div>
 </@layout.mainLayout>
