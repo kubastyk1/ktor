@@ -45,6 +45,8 @@ dependencies {
 
     implementation("io.ktor:ktor-freemarker:$ktor_version")
 
+    implementation("io.ktor:ktor-auth:$ktor_version")
+    implementation("io.ktor:ktor-locations:$ktor_version")
 }
 
 application {

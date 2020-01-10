@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85cc1548-ec60-4d32-b829-2b04c3549352" name="Default Changelist" comment="password validation">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/model/Article.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/model/Category.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/articleList.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/categoryList.ftl" afterDir="false" />
+    <list default="true" id="85cc1548-ec60-4d32-b829-2b04c3549352" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/dao/DAOFacadeDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/dao/DAOFacadeDatabase.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/dao/User.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/model/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/model/User.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +24,7 @@
       <list>
         <option value="Kotlin Interface" />
         <option value="Kotlin Class" />
+        <option value="Class" />
         <option value="Kotlin File" />
       </list>
     </option>
@@ -104,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578210665741</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="List with articles and categories">
+      <created>1578327976345</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578327976345</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -112,7 +115,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -121,6 +126,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="login + signup" />
     <MESSAGE value="password validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="password validation" />
+    <MESSAGE value="List with articles and categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="List with articles and categories" />
   </component>
 </project>
