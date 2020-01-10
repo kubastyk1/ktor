@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="85cc1548-ec60-4d32-b829-2b04c3549352" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/template.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/template.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/dao/DAOFacadeDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/dao/DAOFacadeDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578660158648</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add log out">
+      <created>1578661675891</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578661675891</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +141,7 @@
     <MESSAGE value="password validation" />
     <MESSAGE value="List with articles and categories" />
     <MESSAGE value="Add sessions to log in system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add sessions to log in system" />
+    <MESSAGE value="Add log out" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add log out" />
   </component>
 </project>

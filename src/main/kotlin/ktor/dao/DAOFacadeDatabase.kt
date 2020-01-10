@@ -1,7 +1,6 @@
 package ktor.dao
 
 import ktor.model.*
-import org.jetbrains.exposed.dao.EntityID
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import org.jetbrains.exposed.sql.transactions.transaction
@@ -18,6 +17,7 @@ interface DAOFacade: Closeable{
     fun getCategory(id:Int): Category
     fun getAllCategories(): List<Category>
     fun getArticlesFromCategory(id:Int): List<Article>
+    fun getUserByLogin(login:String?): User?
 }
 
 class DAOFacadeDatabase(val db: Database): DAOFacade{
@@ -98,6 +98,9 @@ class DAOFacadeDatabase(val db: Database): DAOFacade{
     }
     override fun getArticlesFromCategory(id: Int): List<Article> = transaction(db) {
         Article.find(Articles.category eq id).toList()
+    }
+    override fun getUserByLogin(login: String?): User? = transaction(db) {
+        User.find{Users.login eq login.toString()}.singleOrNull()
     }
     override fun close() { }
 }
