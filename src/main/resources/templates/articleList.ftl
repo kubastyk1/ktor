@@ -13,10 +13,6 @@
             <tr>
                 <td>${article.id}</td>
                 <td>${article.title}</td>
-                <td>
-                    <a href="/article?action=edit&id=${article.id}" class="btn btn-secondary float-right mr-2" role="button">Edit</a>
-                    <a href="/articleDelete?id=${article.id}" class="btn btn-danger float-right mr-2" role="button">Delete</a>
-                </td>
             </tr>
             </#list>
         </tbody>

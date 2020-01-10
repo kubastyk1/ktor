@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85cc1548-ec60-4d32-b829-2b04c3549352" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ktor/App.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/template.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/template.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articleList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articleList.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578670960698</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="User edit settings">
+      <created>1578683077119</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578683077119</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +154,7 @@
     <MESSAGE value="Add sessions to log in system" />
     <MESSAGE value="Add log out" />
     <MESSAGE value="Custom user login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Custom user login" />
+    <MESSAGE value="User edit settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="User edit settings" />
   </component>
 </project>

@@ -94,19 +94,6 @@ fun main(args: Array<String>) {
                     }
                 }
             }
-            route("/delete"){
-                get {
-                    if (call.sessions.get<MySession>() != null) {
-                        val id = call.request.queryParameters["id"]
-                        if (id != null) {
-                            dao.deleteUser(id.toInt())
-                            call.respond(FreeMarkerContent("index.ftl", mapOf("users" to dao.getAllUsers())))
-                        }
-                    } else {
-                        call.respond(FreeMarkerContent("login.ftl", mapOf("users" to dao.getAllUsers())))
-                    }
-                }
-            }
             route("/category"){
                 get{
                     if (call.sessions.get<MySession>() != null) {
