@@ -60,10 +60,10 @@ fun main(args: Array<String>) {
                         "new" -> call.respond(FreeMarkerContent("signup.ftl",
                                 mapOf("action" to action)))
                         "edit" -> {
-                            val id = call.request.queryParameters["id"]
-                            if (id != null) {
+                            val session = call.sessions.get<MySession>()
+                            if (session != null) {
                                 call.respond(FreeMarkerContent("user.ftl",
-                                        mapOf("user" to dao.getUser(id.toInt()), "action" to action)))
+                                        mapOf("user" to dao.getUserByLogin(session.name), "action" to action)))
                             }
                         }
                     }
@@ -74,23 +74,23 @@ fun main(args: Array<String>) {
                     when (action) {
                         "new" -> {
                             if(dao.getUserByLogin(postParameters["login"]) == null) {
-                                println("HI " + postParameters["login"])
                                 dao.createUser(postParameters["login"] ?: "", postParameters["email"]
                                         ?: "", postParameters["password"] ?: "")
                                 call.sessions.set(postParameters["login"]?.let { it1 -> MySession(name = it1) })
                             }
                         }
                         "edit" -> {
-                            val id = postParameters["id"]
+                            val session = call.sessions.get<MySession>()
+                            val id = dao.getUserByLogin(session?.name)?.id
                             if (id != null)
-                                dao.updateUser(id.toInt(), postParameters["login"] ?: "", postParameters["email"]
+                                dao.updateUser(id.value, postParameters["login"] ?: "", postParameters["email"]
                                         ?: "", postParameters["password"] ?: "")
                         }
                     }
                     if (call.sessions.get<MySession>() != null) {
                         call.respond(FreeMarkerContent("categoryList.ftl", mapOf("categories" to dao.getAllCategories())))
                     } else {
-                        call.respondRedirect("/user?action=new")
+                        call.respondRedirect("/user?action=" + action)
                     }
                 }
             }

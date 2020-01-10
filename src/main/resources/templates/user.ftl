@@ -13,7 +13,7 @@
             <label for="city">Password</label>
             <input type="text" class="form-control" id="password" name="password" placeholder="Enter Password" value="${(user.password)!}">
         </div>
-        <!--<input type="hidden" id="action" name="action" value="${action}">-->
+        <input type="hidden" id="action" name="action" value="${action}">
         <input type="hidden" id="id" name="id" value="${(user.id)!}">
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

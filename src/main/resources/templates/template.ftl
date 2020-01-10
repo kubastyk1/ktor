@@ -13,7 +13,8 @@
     <div class="container">
         <div class="row m-1">
             <h3>Sport articles</h3>
-            <a href="/logout" class="btn btn-primary float-right" style="margin-left: 800px" role="button">Logout</a>
+            <a href="/user?action=edit" class="btn btn-primary float-right" style="margin-left: 650px" role="button">Settings</a>
+            <a href="/logout" class="btn btn-primary float-right" style="margin-left: 50px" role="button">Logout</a>
         </div>
         <div class="row m-1">
             <#nested/>
