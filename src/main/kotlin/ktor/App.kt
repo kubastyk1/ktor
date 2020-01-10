@@ -117,6 +117,12 @@ fun main(args: Array<String>) {
                     }
                 }
             }
+            route("/logout"){
+                get{
+                    call.sessions.clear<MySession>()
+                    call.respond(FreeMarkerContent("login.ftl", mapOf("users" to dao.getAllUsers())))
+                }
+            }
         }
     }.start(wait = true)
 }

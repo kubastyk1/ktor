@@ -12,7 +12,8 @@
     <body>
     <div class="container">
         <div class="row m-1">
-            <h3>Login system</h3>
+            <h3>Sport articles</h3>
+            <a href="/logout" class="btn btn-primary float-right" style="margin-left: 800px" role="button">Logout</a>
         </div>
         <div class="row m-1">
             <#nested/>
