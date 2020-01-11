@@ -29,12 +29,12 @@ class DAOFacadeDatabase(val db: Database): DAOFacade{
         User.new {
             login ="user1"
             email = "user1@gmail.com"
-            password = "user1"
+            password = "Pass!"
         }
         User.new {
             login ="user2"
             email = "user2@gmail.com"
-            password = "user2"
+            password = "Pass!"
         }
 
         Category.new {
